@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 
+#Python code to shutdown raspberry pi
+#uses gpiozero library and BCM pin numbers
+
 from gpiozero import Button
 import subprocess
 
