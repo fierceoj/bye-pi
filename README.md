@@ -74,7 +74,11 @@ Alternatively, you could use cron instead of rc.local to schedule the script to 
 ```@reboot /home/pi/bye_pi.sh &``` <br/>
 
 # Usage
-Connect the pushbutton switch to the GPIO pins when the Raspberry Pi is powered off. Power on the Raspberry Pi. The script should already be running via rc.local or cron. Simply push the button to power off the Pi. 
+Connect the pushbutton switch to the physical pins 39 and 40. It is best to connect the switch when the Raspberry Pi is powered off. 
+
+![alt text](./images/pushbutton_connected.png)
+
+Power on the Raspberry Pi. The script should already be running via rc.local or cron. Simply push the button to power off the Pi. 
 
 # Similar Projects
 
