@@ -22,13 +22,26 @@ If the switch did not already come with jumper wires attached, solder two jumper
 
 (IMAGE HERE)
 
-## GPIO Pins
+### GPIO Pins
 There is more than one pin cominbation available for connecting the pushbutton switch. The code in this project uses physical pins 39 and 40, so unless you modify the code accordingly, stick with those pins. Keep in mind that the physical pin numbers are different from the BCM pin numbers, which are also different from the wiringPi pin numbers. The best way to visualize the relationship between the three different numbering systems is to use the `gpio readall` command. The `pinout` command shows each pins' physical orientation on the board as well as other useful information.
 
 (gpio readall command image)
 (pinout command image)
 
 # Usage
+### shut_your_pi.py
+Make the Python script executable. <br/>
+```chmod +x shut_your_pi.py```
+
+Place the script in rc.local so it runs at boot. To do so, edit the rc.local file: <br/>
+```sudo nano /etc/rc.local``` <br/>
+Add the following above `exit 0`: <br/>
+```home/pi/shut_your_pi.py &``` <br/>
+This assumes you have the script in your /home/pi directory, but if you have it elsewhere just provide the actual path to the file instead of /home/pi.
+
+Alternatively, you could use cron instead of rc.local to schedule the script to run at boot.
+```crontab -e``` <br/>
+```@reboot /home/pi/shut_your_pi.py &``` <br/>
 
 # Similar Projects
 
