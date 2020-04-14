@@ -16,7 +16,7 @@ int main(void) {
 
         //wait for button press
         while (1) {
-                if (digitalRead(button) == HIGH) {
+                if (digitalRead(button) == LOW) {
                         printf("Powering down the raspberry pi...\n");
                         system("sudo poweroff");
                 }
