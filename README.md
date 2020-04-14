@@ -23,10 +23,13 @@ If the switch did not already come with jumper wires attached, solder two jumper
 (IMAGE HERE)
 
 ### GPIO Pins
-There is more than one pin cominbation available for connecting the pushbutton switch. The code in this project uses physical pins 39 and 40, so unless you modify the code accordingly, stick with those pins. Keep in mind that the physical pin numbers are different from the BCM pin numbers, which are also different from the wiringPi pin numbers. The best way to visualize the relationship between the three different numbering systems is to use the `gpio readall` command. The `pinout` command shows each pins' physical orientation on the board as well as other useful information.
+There is more than one pin cominbation available for connecting the pushbutton switch. The code in this project uses physical pins 39 and 40, so unless you modify the code accordingly, stick with those pins. Keep in mind that the physical pin numbers are different from the BCM pin numbers, which are also different from the wiringPi pin numbers. The best way to visualize the relationship between the three different numbering systems is to use the `gpio readall` command. 
 
 ![alt text](./images/gpio_readall.png)
-(pinout command image)
+
+Additionally, the `pinout` command shows each pins' physical orientation on the board as well as other useful information.
+
+![alt text](./images/pinout.png)
 
 # Software Setup (Choose One)
 The setup instructions assume you have the script in your /home/pi directory, but if you have it elsewhere just provide the actual path to the file instead of /home/pi.
