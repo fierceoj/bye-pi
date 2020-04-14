@@ -53,6 +53,8 @@ Place the program in rc.local so it runs as boot. To do so, edit the rc.local fi
 Add the following above `exit 0`: <br/>
 ```home/pi/shut_your_pi &``` <br/>
 
+### shut_your_pi.sh
+
 # Usage
 Connect the pushbutton switch to the GPIO pins when the Raspberry Pi is powered off. Power on the Raspberry Pi. The script should already be running via rc.local or cron. Simply push the button to power off the Pi. 
 
