@@ -29,6 +29,8 @@ There is more than one pin cominbation available for connecting the pushbutton s
 (pinout command image)
 
 # Software Setup (Choose One)
+The setup instructions assume you have the script in your /home/pi directory, but if you have it elsewhere just provide the actual path to the file instead of /home/pi.
+
 ### shut_your_pi.py
 Make the Python script executable. <br/>
 ```chmod +x shut_your_pi.py```
@@ -42,8 +44,6 @@ Alternatively, you could use cron instead of rc.local to schedule the script to 
 ```crontab -e``` <br/>
 ```@reboot /home/pi/shut_your_pi.py &``` <br/>
 
-This setup assumes you have the script in your /home/pi directory, but if you have it elsewhere just provide the actual path to the file instead of /home/pi.
-
 ### shut_your_pi.c
 Compile the C code to executable code. <br/>
 ```gcc -Wall shut_your_pi.c -o shut_your_pi -l wiringPi```
@@ -53,7 +53,22 @@ Place the program in rc.local so it runs as boot. To do so, edit the rc.local fi
 Add the following above `exit 0`: <br/>
 ```home/pi/shut_your_pi &``` <br/>
 
+Alternatively, you could use cron instead of rc.local to schedule the script to run at boot.
+```crontab -e``` <br/>
+```@reboot /home/pi/shut_your_pi &``` <br/>
+
 ### shut_your_pi.sh
+Make the bash script executable. <br/>
+```chmod +x shut_your_pi.sh```
+
+Place the script in rc.local so it runs at boot. To do so, edit the rc.local file: <br/>
+```sudo nano /etc/rc.local``` <br/>
+Add the following above `exit 0`: <br/>
+```home/pi/shut_your_pi.sh &``` <br/>
+
+Alternatively, you could use cron instead of rc.local to schedule the script to run at boot.
+```crontab -e``` <br/>
+```@reboot /home/pi/shut_your_pi.sh &``` <br/>
 
 # Usage
 Connect the pushbutton switch to the GPIO pins when the Raspberry Pi is powered off. Power on the Raspberry Pi. The script should already be running via rc.local or cron. Simply push the button to power off the Pi. 
