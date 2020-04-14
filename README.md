@@ -20,7 +20,7 @@ Software Requirements
 # Hardware Setup
 If the switch did not already come with jumper wires attached, solder two jumper wires to the switch. The two jumper wires should have female connectors on one end, so they can be attached to the GPIO pins on the Raspberry Pi. 
 
-(IMAGE HERE)
+![alt text](./images/pushbutton.heic)
 
 ### GPIO Pins
 There is more than one pin cominbation available for connecting the pushbutton switch. The code in this project uses physical pins 39 and 40, so unless you modify the code accordingly, stick with those pins. Keep in mind that the physical pin numbers are different from the BCM pin numbers, which are also different from the wiringPi pin numbers. The best way to visualize the relationship between the three different numbering systems is to use the `gpio readall` command. 
