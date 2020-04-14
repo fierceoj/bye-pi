@@ -9,7 +9,7 @@ int main(void) {
         wiringPiSetup();
         
         // wiringPi pin 29, physical pin 40, BCM pin 21 
-        const int button = 29;
+        int button = 29;
 
         //set pin 29 as input
         pinMode(button, INPUT);
