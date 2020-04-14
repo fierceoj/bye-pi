@@ -10,9 +10,9 @@ Hardware Requirements
 If you need to connect the pushbutton switch with the jumper wires, you will also need a soldering iron and solder.
 
 Software Requirements
-- For shut_your_pi.py: <br/>
+- For bye_pi.py: <br/>
   ```sudo apt install python3-gpiozero```
-- For shut_your_pi.c and shut_your_pi.sh: <br/>
+- For bye_pi.c and shut_your_pi.sh: <br/>
   ```sudo apt-get install wiringpi```
 
 **NOTE:** The project was tested on a Raspberry Pi 3 Model B running the Raspbian Buster Lite OS.
@@ -31,44 +31,44 @@ There is more than one pin cominbation available for connecting the pushbutton s
 # Software Setup (Choose One)
 The setup instructions assume you have the script in your /home/pi directory, but if you have it elsewhere just provide the actual path to the file instead of /home/pi.
 
-### shut_your_pi.py
+### bye_pi.py
 Make the Python script executable. <br/>
-```chmod +x shut_your_pi.py```
+```chmod +x bye_pi.py```
 
 Place the script in rc.local so it runs at boot. To do so, edit the rc.local file: <br/>
 ```sudo nano /etc/rc.local``` <br/>
 Add the following above `exit 0`: <br/>
-```home/pi/shut_your_pi.py &``` <br/>
+```home/pi/bye_pi.py &``` <br/>
 
 Alternatively, you could use cron instead of rc.local to schedule the script to run at boot.
 ```crontab -e``` <br/>
-```@reboot /home/pi/shut_your_pi.py &``` <br/>
+```@reboot /home/pi/bye_pi.py &``` <br/>
 
-### shut_your_pi.c
+### bye_pi.c
 Compile the C code to executable code. <br/>
-```gcc -Wall shut_your_pi.c -o shut_your_pi -l wiringPi```
+```gcc -Wall bye_pi.c -o bye_pi -l wiringPi```
 
 Place the program in rc.local so it runs as boot. To do so, edit the rc.local file: <br/>
 ```sudo nano /etc/rc.local``` <br/>
 Add the following above `exit 0`: <br/>
-```home/pi/shut_your_pi &``` <br/>
+```home/pi/bye_pi &``` <br/>
 
 Alternatively, you could use cron instead of rc.local to schedule the script to run at boot.
 ```crontab -e``` <br/>
-```@reboot /home/pi/shut_your_pi &``` <br/>
+```@reboot /home/pi/bye_pi &``` <br/>
 
-### shut_your_pi.sh
+### bye_pi.sh
 Make the bash script executable. <br/>
-```chmod +x shut_your_pi.sh```
+```chmod +x bye_pi.sh```
 
 Place the script in rc.local so it runs at boot. To do so, edit the rc.local file: <br/>
 ```sudo nano /etc/rc.local``` <br/>
 Add the following above `exit 0`: <br/>
-```home/pi/shut_your_pi.sh &``` <br/>
+```home/pi/bye_pi.sh &``` <br/>
 
 Alternatively, you could use cron instead of rc.local to schedule the script to run at boot.
 ```crontab -e``` <br/>
-```@reboot /home/pi/shut_your_pi.sh &``` <br/>
+```@reboot /home/pi/bye_pi.sh &``` <br/>
 
 # Usage
 Connect the pushbutton switch to the GPIO pins when the Raspberry Pi is powered off. Power on the Raspberry Pi. The script should already be running via rc.local or cron. Simply push the button to power off the Pi. 
