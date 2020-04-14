@@ -56,7 +56,7 @@ Place the program in rc.local so it runs as boot. To do so, edit the rc.local fi
 Add the following above `exit 0`: <br/>
 ```home/pi/bye_pi &``` <br/>
 
-Alternatively, you could use cron instead of rc.local to schedule the script to run at boot.
+Alternatively, you could use cron instead of rc.local to schedule the script to run at boot. <br/>
 ```crontab -e``` <br/>
 ```@reboot /home/pi/bye_pi &``` <br/>
 
@@ -69,7 +69,7 @@ Place the script in rc.local so it runs at boot. To do so, edit the rc.local fil
 Add the following above `exit 0`: <br/>
 ```home/pi/bye_pi.sh &``` <br/>
 
-Alternatively, you could use cron instead of rc.local to schedule the script to run at boot.
+Alternatively, you could use cron instead of rc.local to schedule the script to run at boot. <br/>
 ```crontab -e``` <br/>
 ```@reboot /home/pi/bye_pi.sh &``` <br/>
 
