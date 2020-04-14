@@ -10,9 +10,9 @@ Hardware Requirements
 If you need to connect the pushbutton switch with the jumper wires, you will also need a soldering iron and solder.
 
 Software Requirements
-- For shut-your-pi.py: <br/>
+- For shut_your_pi.py: <br/>
   ```sudo apt install python3-gpiozero```
-- For shut-your-pi.c: <br/>
+- For shut_your_pi.c and shut_your_pi.sh: <br/>
   ```sudo apt-get install wiringpi```
 
 **NOTE:** The project was tested on a Raspberry Pi 3 Model B running the Raspbian Buster Lite OS.
