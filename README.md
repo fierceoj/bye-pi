@@ -80,8 +80,3 @@ Connect the pushbutton switch to the physical pins 39 and 40. It is best to conn
 
 Power on the Raspberry Pi. The script should already be running via rc.local or cron. Simply push the button to power off the Pi. 
 
-# Similar Projects
-
-
-
-
