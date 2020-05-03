@@ -1,4 +1,5 @@
 //C code to shut down the raspberry pi when a button is pressed
+//must install wiringpi if using lite raspbian os (already installed on regular raspbian)
 
 #include <stdio.h>
 #include <stdlib.h>
