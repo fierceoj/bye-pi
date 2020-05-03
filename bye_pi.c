@@ -1,18 +1,24 @@
 //C code to shut down the raspberry pi when a button is pressed
-//uses wiringPi library and wiringPi pin numbers
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <wiringPi.h>
 
 int main(void) {
-        wiringPiSetup();
-        
-        // wiringPi pin 29, physical pin 40, BCM pin 21 
-        int button = 29;
+
+        //wiringPi pin 29, physical pin 40, BCM pin 21 
+        const int button = 29;  
+
+        //initialize wiringPi
+        if (wiringPiSetup() == -1) {
+                exit(1);
+        }               
 
         //set pin 29 as input
         pinMode(button, INPUT);
+
+        //initialize pin state to HIGH
+        system("gpio mode 29 up");
 
         //wait for button press
         while (1) {
