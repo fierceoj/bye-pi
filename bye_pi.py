@@ -9,5 +9,6 @@ import subprocess
 #wait for button press
 #BCM pin 21, physical pin 40, wiringPi pin 29
 Button(21).wait_for_press()
+#power off the system when button is pressed
 print('Powering down the raspberry pi...\n')
 subprocess.run(['sudo', 'poweroff'])
