@@ -11,10 +11,12 @@ echo 21 > /sys/class/gpio/export
 gpio -g mode 21 in
 gpio -g mode 21 up
 
+#poll the pin state to see if button pressed
+#could also read pin state with 'gpio -g read 21'
 while true
 do
-#could also read pin state with 'gpio -g read 21'
         if [ `cat /sys/class/gpio/gpio21/value` == "0" ]; then
+                #power off the system if button pressed
                 echo "Powering down the raspberry pi..."
                 sudo poweroff
         fi
