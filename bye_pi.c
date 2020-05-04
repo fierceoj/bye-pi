@@ -18,11 +18,12 @@ int main(void) {
         //set pin 29 as input
         pinMode(button, INPUT);
 
-        //initialize pin state to HIGH
+        //initialize pin state to HIGH by setting internal pull-up resistor
         system("gpio mode 29 up");
 
         //wait for button press
         while (1) {
+                //power off the system if button pressed
                 if (digitalRead(button) == LOW) {
                         printf("Powering down the raspberry pi...\n");
                         system("sudo poweroff");
