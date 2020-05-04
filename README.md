@@ -1,5 +1,5 @@
 # Raspberry Pi Shutdown Button
-Add a physical shutdown button to a Raspberry Pi. This is particularly useful for a Raspberry Pi running in headless mode, since yanking out the power cord is not a safe option for shutdown. Choose between C, Python, or shell script implementations.
+Add a physical shutdown button to a Raspberry Pi. This is particularly useful for a Raspberry Pi running in headless mode, since yanking out the power cord is not a safe option for shutdown. Choose between C, Python, or UNIX shell script implementations.
 
 # Requirements
 Hardware Requirements
