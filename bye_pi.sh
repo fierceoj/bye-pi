@@ -1,5 +1,5 @@
 #!/bin/bash
-#UNIX shell script to shut down Raspberry Pi when a button is pressed
+#UNIX shell (bash) script to shut down Raspberry Pi when a button is pressed
 #must install wiringpi to run 'gpio' commands if using lite raspbian os (already installed on regular raspbian)
 
 #export BCM pin 21 and set as input
